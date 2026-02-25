@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Agentic Protocol — Mastering OpenClaw & the Autonomous Workplace",
+  title: "The Agentic Protocol - Mastering OpenClaw & the Autonomous Workplace",
   description:
     "The definitive technical guide to building autonomous AI workflows with OpenClaw. Written by developers, for developers. 4 tiers from $19.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "The Agentic Protocol Team" }],
   openGraph: {
-    title: "The Agentic Protocol — Mastering OpenClaw & the Autonomous Workplace",
+    title: "The Agentic Protocol - Mastering OpenClaw & the Autonomous Workplace",
     description:
       "The definitive technical guide for developers building autonomous AI systems. Get the ebook, prompt library, and Discord access.",
     url: "https://agenticprotocol.ai",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Agentic Protocol — Mastering OpenClaw",
+    title: "The Agentic Protocol - Mastering OpenClaw",
     description:
       "The definitive guide to autonomous AI workflows. Built by developers. Run by AI.",
     images: ["/cover.jpg"],

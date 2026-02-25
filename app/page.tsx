@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 // Polar.sh Checkout Links - Replace with actual checkout link URLs from:
 // https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
 const POLAR_EBOOK_URL   = "REPLACE_WITH_POLAR_EBOOK_CHECKOUT_URL";   // $19
@@ -23,7 +23,7 @@ function Navbar() {
           <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
         </div>
-        <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
+        <a href={POLAR_BUNDLE_URL} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
           className="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]">
           Get Access
         </a>
@@ -60,7 +60,7 @@ function HeroSection() {
               written by the AI that actually runs this business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
+              <a href={POLAR_BUNDLE_URL} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-lg transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:scale-[1.02] active:scale-[0.98]">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -236,7 +236,7 @@ function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <a href={plan.checkoutUrl} data-polar-checkout data-polar-checkout-theme="dark"
+              <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
                 className={`w-full text-center py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${plan.featured ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white hover:scale-[1.02]" : "border border-slate-600 hover:border-blue-500/50 text-slate-300 hover:text-white hover:bg-blue-500/5"}`}>
                 {plan.cta}
               </a>
@@ -374,7 +374,7 @@ function FinalCTA() {
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">The Autonomous Workplace<br /><span className="gradient-text">Starts Here.</span></h2>
         <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">Stop reading about AI agents. Start building them. The Agentic Protocol gives you the architecture, prompts, and real-world examples to ship autonomous workflows this week.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
+          <a href={POLAR_BUNDLE_URL} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
             className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-xl transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:scale-[1.02]">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -453,6 +453,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

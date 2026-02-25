@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import Script from "next/script";
+﻿import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -127,18 +126,21 @@ export default function RootLayout({
             }),
           }}
         />
+        {/* Polar.sh Embedded Checkout - auto-init when loaded */}
+        <script
+          src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@latest/dist/embed.global.js"
+          data-auto-init=""
+          async
+        />
       </head>
       <body className="bg-[#050A14] text-slate-200 antialiased">
         {children}
-        {/* Polar.sh Embedded Checkout - uses Next.js Script for proper loading */}
-        <Script
-          src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@latest/dist/embed.global.js"
-          strategy="afterInteractive"
-          data-auto-init=""
-        />
       </body>
     </html>
   );
 }
+
+
+
 
 

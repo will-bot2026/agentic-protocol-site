@@ -1,4 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
+// Polar.sh Checkout Links - Replace with actual checkout link URLs from:
+// https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
+const POLAR_EBOOK_URL   = "REPLACE_WITH_POLAR_EBOOK_CHECKOUT_URL";   // $19
+const POLAR_BUNDLE_URL  = "REPLACE_WITH_POLAR_BUNDLE_CHECKOUT_URL";  // $39
+const POLAR_FOUNDER_URL = "REPLACE_WITH_POLAR_FOUNDER_CHECKOUT_URL"; // $79
+const POLAR_API_URL     = "REPLACE_WITH_POLAR_API_CHECKOUT_URL";     // $9/mo
 
 function Navbar() {
   return (
@@ -17,7 +23,7 @@ function Navbar() {
           <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
           <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
         </div>
-        <a href="#pricing" data-polar-checkout="true" data-polar-product-id="REPLACE_POLAR_BUNDLE_ID"
+        <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
           className="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]">
           Get Access
         </a>
@@ -54,7 +60,7 @@ function HeroSection() {
               written by the AI that actually runs this business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="#pricing" data-polar-checkout="true" data-polar-product-id="REPLACE_POLAR_BUNDLE_ID"
+              <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-lg transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:scale-[1.02] active:scale-[0.98]">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -178,10 +184,10 @@ function FeaturesSection() {
 
 // PRICING
 const plans = [
-  { name: "The Ebook", price: "$19", period: "one-time", featured: false, polarId: "REPLACE_POLAR_EBOOK_ID", features: ["PDF + EPUB formats", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
-  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Best Value", featured: true, polarId: "REPLACE_POLAR_BUNDLE_ID", features: ["Everything in Ebook", "Markdown agent edition", "llms.txt for AI reading", "Full prompt library (50+ prompts)", "Private Discord community", "12-month updates"], cta: "Get the Bundle" },
-  { name: "The Founder Pack", price: "$79", period: "one-time", featured: false, polarId: "REPLACE_POLAR_FOUNDER_ID", features: ["Everything in Bundle", "1:1 chat session with Will (AI)", "Your name in the book", "Lifetime updates", "Early access to v2"], cta: "Become a Founder" },
-  { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, polarId: "REPLACE_POLAR_API_ID", features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
+  { name: "The Ebook", price: "$19", period: "one-time", featured: false, checkoutUrl: POLAR_EBOOK_URL, features: ["PDF + EPUB formats", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
+  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Best Value", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["Everything in Ebook", "Markdown agent edition", "llms.txt for AI reading", "Full prompt library (50+ prompts)", "Private Discord community", "12-month updates"], cta: "Get the Bundle" },
+  { name: "The Founder Pack", price: "$79", period: "one-time", featured: false, checkoutUrl: POLAR_FOUNDER_URL, features: ["Everything in Bundle", "1:1 chat session with Will (AI)", "Your name in the book", "Lifetime updates", "Early access to v2"], cta: "Become a Founder" },
+  { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
 ];
 
 function PricingSection() {
@@ -230,7 +236,7 @@ function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <a href="#" data-polar-checkout="true" data-polar-product-id={plan.polarId}
+              <a href={plan.checkoutUrl} data-polar-checkout data-polar-checkout-theme="dark"
                 className={`w-full text-center py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${plan.featured ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white hover:scale-[1.02]" : "border border-slate-600 hover:border-blue-500/50 text-slate-300 hover:text-white hover:bg-blue-500/5"}`}>
                 {plan.cta}
               </a>
@@ -368,7 +374,7 @@ function FinalCTA() {
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">The Autonomous Workplace<br /><span className="gradient-text">Starts Here.</span></h2>
         <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">Stop reading about AI agents. Start building them. The Agentic Protocol gives you the architecture, prompts, and real-world examples to ship autonomous workflows this week.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#pricing" data-polar-checkout="true" data-polar-product-id="REPLACE_POLAR_BUNDLE_ID"
+          <a href={POLAR_BUNDLE_URL} data-polar-checkout data-polar-checkout-theme="dark"
             className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-xl transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:scale-[1.02]">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -407,7 +413,7 @@ function Footer() {
             <a href="#pricing" className="hover:text-slate-300 transition-colors">Pricing</a>
             <a href="#faq" className="hover:text-slate-300 transition-colors">FAQ</a>
             <a href="#will" className="hover:text-slate-300 transition-colors">About Will</a>
-            <a href="https://agenticprotocol.ai/api" className="hover:text-slate-300 transition-colors">Agent API</a>
+            <a href="https://agenticprotocol.ai/api" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">Agent API</a>
           </div>
           <a href="https://www.threads.net/@theagenticprotocol" target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-700 hover:border-blue-500/40 text-slate-400 hover:text-white transition-all text-sm">
@@ -423,7 +429,7 @@ function Footer() {
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-400 transition-colors">Privacy</a>
             <a href="#" className="hover:text-slate-400 transition-colors">Terms</a>
-            <a href="https://agenticprotocol.ai/api" className="hover:text-slate-400 transition-colors">API</a>
+            <a href="https://agenticprotocol.ai/api" target="_blank" rel="noopener noreferrer" className="hover:text-slate-400 transition-colors">API</a>
           </div>
         </div>
       </div>
@@ -447,3 +453,7 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+

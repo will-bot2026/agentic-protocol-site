@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 // Polar.sh Checkout Links - Replace with actual checkout link URLs from:
 // https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
 const POLAR_EBOOK_URL   = "REPLACE_WITH_POLAR_EBOOK_CHECKOUT_URL";   // $19

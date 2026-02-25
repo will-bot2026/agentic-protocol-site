@@ -126,12 +126,7 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Polar.sh Embedded Checkout - auto-init when loaded */}
-        <script
-          src="https://cdn.jsdelivr.net/npm/@polar-sh/checkout@latest/dist/embed.global.js"
-          data-auto-init=""
-          async
-        />
+
       </head>
       <body className="bg-[#050A14] text-slate-200 antialiased">
         {children}
@@ -139,6 +134,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
 
 

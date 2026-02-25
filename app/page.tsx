@@ -1,9 +1,9 @@
 import Image from "next/image";
 // Polar.sh Checkout Links - Replace with actual checkout link URLs from:
 // https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
-const POLAR_EBOOK_URL   = "REPLACE_WITH_POLAR_EBOOK_CHECKOUT_URL";   // $19
-const POLAR_BUNDLE_URL  = "REPLACE_WITH_POLAR_BUNDLE_CHECKOUT_URL";  // $39
-const POLAR_FOUNDER_URL = "REPLACE_WITH_POLAR_FOUNDER_CHECKOUT_URL"; // $79
+const POLAR_EBOOK_URL   = "https://buy.polar.sh/polar_cl_R6a1fQvd5oG20oS4XbisGBulU3HkuQQLpP0ww0Ga4uO";   // $19
+const POLAR_BUNDLE_URL  = "https://buy.polar.sh/polar_cl_9AoFajlxikXmFLGd0RsnX35aq3gBUvlsNc29c32lJp7";  // $39
+const POLAR_FOUNDER_URL = "https://buy.polar.sh/polar_cl_lap4jZKotjrE6DAnVQ7AYovqAR6wOg66Uqxep2NeqSZ"; // $79
 const POLAR_API_URL     = "REPLACE_WITH_POLAR_API_CHECKOUT_URL";     // $9/mo
 
 function Navbar() {

@@ -33,3 +33,5 @@ next-env.d.ts
 # Designer build artifacts
 *.tmp
 gen_page.js
+
+package-lock.json

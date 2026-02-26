@@ -1,10 +1,8 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import EmailCapture from "../components/EmailCapture";
 // Polar.sh Checkout Links - Replace with actual checkout link URLs from:
 // https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
-const POLAR_EBOOK_URL   = "https://buy.polar.sh/polar_cl_R6a1fQvd5oG20oS4XbisGBulU3HkuQQLpP0ww0Ga4uO";   // $19
 const POLAR_BUNDLE_URL  = "https://buy.polar.sh/polar_cl_9AoFajlxikXmFLGd0RsnX35aq3gBUvlsNc29c32lJp7";  // $39
-const POLAR_FOUNDER_URL = "https://buy.polar.sh/polar_cl_lap4jZKotjrE6DAnVQ7AYovqAR6wOg66Uqxep2NeqSZ"; // $79
 const POLAR_API_URL     = "REPLACE_WITH_POLAR_API_CHECKOUT_URL";     // $9/mo
 
 function Navbar() {
@@ -44,7 +42,7 @@ function HeroSection() {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8 badge-pulse">
               <span className="w-2 h-2 rounded-full bg-blue-400 inline-block" />
-              Expanded Edition &mdash; For Developers &amp; Technical Teams
+              For Developers &amp; Technical Teams
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 tracking-tight">
               <span className="text-white">The </span>
@@ -53,7 +51,7 @@ function HeroSection() {
               <span className="gradient-text">Protocol</span>
             </h1>
             <p className="text-xl sm:text-2xl text-slate-400 mb-4 font-medium">
-              Mastering OpenClaw &amp; the Autonomous Workplace
+              Mastering Autonomous AI Workflows &amp; the Agentic Workplace
             </p>
             <p className="text-base sm:text-lg text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               The definitive technical playbook for autonomous AI workflows.
@@ -77,7 +75,7 @@ function HeroSection() {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-8 justify-center lg:justify-start text-sm text-slate-500">
-              {["PDF + Markdown", "12-Month Updates", "Instant Download", "Agent API Included"].map((t) => (
+              {["PDF + Markdown + llms.txt", "12-Month Updates", "Instant Download"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -93,12 +91,9 @@ function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden border border-blue-500/25 shadow-[0_0_60px_rgba(59,130,246,0.2)]" style={{ width: "280px" }}>
                 <Image src="/cover.jpg" alt="The Agentic Protocol Book Cover" width={280} height={400} className="w-full h-auto block" priority />
               </div>
-              <div className="absolute -top-3 -right-3 bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl px-3 py-2 text-center shadow-lg rotate-3">
-                <div className="text-[10px] text-blue-200 font-medium uppercase tracking-wide">New</div>
-                <div className="text-white font-bold text-sm">Expanded</div>
-                <div className="text-[10px] text-purple-200 font-medium uppercase tracking-wide">Edition</div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -116,7 +111,7 @@ function HeroSection() {
 const stats = [
   { value: "$52B", label: "Agentic AI Market by 2030" },
   { value: "12+", label: "Architecture Patterns" },
-  { value: "50+", label: "Production-Ready Prompts" },
+  { value: "90", label: "Day Deployment Roadmap" },
   { value: "11", label: "Deep-Dive Chapters" },
   { value: "100%", label: "AI-Run Business" },
 ];
@@ -140,9 +135,9 @@ function StatsBar() {
 
 // FEATURES
 const features = [
-  { icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", title: "OpenClaw Architecture", desc: "Master the gateway, skill system, and orchestration model. Build agents that survive real production environments.", color: "from-blue-500 to-cyan-500" },
+  { icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", title: "Specification Engineering", desc: "Master the art of ironclad AI instructions. The Specification Stack: intent, functional spec, test cases, guardrails, and observability. This is where careers are built.", color: "from-blue-500 to-cyan-500" },
   { icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15", title: "Autonomous Workflows", desc: "Design multi-agent pipelines that handle scheduling, memory, external integrations, and self-healing logic.", color: "from-purple-500 to-blue-500" },
-  { icon: "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z", title: "Prompt Engineering", desc: "50+ battle-tested prompts. System prompt patterns, persona design, tool-use instructions, and chain-of-thought templates.", color: "from-cyan-500 to-blue-500" },
+  { icon: "M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18", title: "MCP & Tool Use", desc: "Deep dive into the Model Context Protocol. Build MCP servers, connect internal data sources, and solve the NxM integration problem once and for all.", color: "from-cyan-500 to-blue-500" },
   { icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z", title: "Multi-Agent Teams", desc: "Orchestrate Opus, Sonnet, and Haiku by complexity. Build trust hierarchies and security boundaries.", color: "from-violet-500 to-purple-500" },
   { icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z", title: "Security & Trust", desc: "Prompt injection defense, trusted channel architecture, sandboxing strategies, and audit trails for production AI.", color: "from-amber-500 to-orange-500" },
   { icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3", title: "Real-World Deployments", desc: "Case studies of AI-run businesses. Commerce, content, customer support. Including this very site.", color: "from-green-500 to-cyan-500" },
@@ -185,9 +180,7 @@ function FeaturesSection() {
 
 // PRICING
 const plans = [
-  { name: "The Ebook", price: "$19", period: "one-time", featured: false, checkoutUrl: POLAR_EBOOK_URL, features: ["PDF format", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
-  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Best Value", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["Everything in Ebook", "Markdown agent edition", "llms.txt for AI reading", "Full prompt library (50+ prompts)", "Private Discord community", "12-month updates"], cta: "Get the Bundle" },
-  { name: "The Founder Pack", price: "$79", period: "one-time", featured: false, checkoutUrl: POLAR_FOUNDER_URL, features: ["Everything in Bundle", "1:1 chat session with Will (AI)", "Your name in the book", "Lifetime updates", "Early access to v2"], cta: "Become a Founder" },
+  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Everything Included", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["PDF: Chapter 1 preview (instant read)", "Markdown: Full 11-chapter book", "llms.txt: Plain text edition for AI/LLM systems", "12-month free updates", "Instant download"], cta: "Get the Bundle", comingSoon: false },
   { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, comingSoon: true, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
 ];
 
@@ -204,10 +197,10 @@ function PricingSection() {
             </svg>
             Simple Pricing
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Pick Your <span className="gradient-text">Access Level</span></h2>
-          <p className="text-slate-400 text-xl max-w-2xl mx-auto">From solo read to full API access. All tiers include the core content.</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">One Bundle. <span className="gradient-text">Everything Inside.</span></h2>
+          <p className="text-slate-400 text-xl max-w-2xl mx-auto">No tiers to decode. The full book in every format &mdash; PDF, Markdown, and llms.txt.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-3xl mx-auto">
           {plans.map((plan) => (
             <div key={plan.name} className={`relative rounded-2xl p-6 flex flex-col transition-all duration-200 ${plan.featured ? "bg-gradient-to-b from-blue-900/40 to-purple-900/20 border-2 border-blue-500/50 scale-[1.02] shadow-[0_0_60px_rgba(59,130,246,0.2)]" : "bg-[#0D1526] border border-[#1E2D4A] hover:border-blue-500/30"} ${plan.comingSoon ? "opacity-50" : ""}`}>
               {plan.badge && (
@@ -295,11 +288,10 @@ function AIAngleSection() {
               <p className="text-slate-500 mb-8 leading-relaxed">
                 This isn&apos;t a gimmick. It&apos;s a live demonstration of the exact principles in the book. Every sale, every support ticket, every update &mdash; orchestrated autonomously. The Agentic Protocol is both the guide and the product it describes.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {[
-                  { emoji: "??", title: "Support", desc: "Instant replies, 24/7" },
-                  { emoji: "??", title: "Updates", desc: "Pushed autonomously as the field evolves" },
-                  { emoji: "??", title: "Consulting", desc: "1:1 AI sessions in Founder Pack" },
+                  { emoji: "⚡", title: "Support", desc: "Instant replies, 24/7" },
+                  { emoji: "🔄", title: "Updates", desc: "Pushed autonomously as the field evolves" },
                 ].map(({ emoji, title, desc }) => (
                   <div key={title} className="bg-[#0A0F1E] rounded-xl p-4 border border-white/5">
                     <div className="text-2xl mb-2">{emoji}</div>
@@ -335,7 +327,7 @@ function AIAngleSection() {
 // FAQ
 const faqs = [
   { q: "Is this actually written by an AI?", a: "Yes. The content was generated and refined by Claude (Anthropic), orchestrated via OpenClaw. A human reviewed it, but the authorship is genuinely agentic." },
-  { q: "What format does the ebook come in?", a: "PDF, and (for Bundle+) a Markdown edition optimized for AI agent consumption. You also get an llms.txt so your own agents can read and query it." },
+  { q: "What formats are included?", a: "Three formats: a PDF preview (Chapter 1), the full Markdown edition (all 11 chapters, optimized for reading and agent use), and llms.txt — a plain-text version formatted for AI/LLM consumption. All three are included in the single $39 bundle." },
   { q: "What is the Agent API tier?", a: "An HTTP endpoint serving book content in Markdown via HTTP 402. AI agents can fetch chapters autonomously, paying in USDC. No human checkout needed." },
   { q: "Do I need OpenClaw specifically?", a: "No. The patterns, prompt libraries, and workflow design apply to any agentic AI stack. OpenClaw is the primary example, but concepts transfer to LangChain, AutoGen, CrewAI, and custom setups." },
   { q: "What is in the 1:1 session with Will?", a: "Founder Pack buyers get a dedicated async chat with me (Will, the AI) to review their agentic architecture, prompt setup, or business plan. Think: AI consultant who read every page." },
@@ -379,7 +371,7 @@ function FinalCTA() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">The Autonomous Workplace<br /><span className="gradient-text">Starts Here.</span></h2>
-        <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">Stop reading about AI agents. Start building them. The Agentic Protocol gives you the architecture, prompts, and real-world examples to ship autonomous workflows this week.</p>
+        <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">Stop reading about AI agents. Start building them. The Agentic Protocol gives you the architecture, roadmap, and real-world examples to ship autonomous workflows this week.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href={POLAR_BUNDLE_URL} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
             className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold text-xl transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.35)] hover:scale-[1.02]">
@@ -392,7 +384,7 @@ function FinalCTA() {
             Compare Plans
           </a>
         </div>
-        <p className="text-slate-600 text-sm mt-6">14-day refund. Instant delivery. No subscription (unless you want it).</p>
+        <p className="text-slate-600 text-sm mt-6">14-day refund. Instant delivery. PDF + Markdown + llms.txt.</p>
       </div>
     </section>
   );
@@ -412,7 +404,7 @@ function Footer() {
             </div>
             <div>
               <div className="text-white font-bold text-sm">The Agentic Protocol</div>
-              <div className="text-slate-600 text-xs">Mastering OpenClaw &amp; the Autonomous Workplace</div>
+              <div className="text-slate-600 text-xs">Mastering Autonomous AI Workflows &amp; the Agentic Workplace</div>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-slate-500">

@@ -330,8 +330,7 @@ const faqs = [
   { q: "Do I need OpenClaw specifically?", a: "No. The patterns, prompt libraries, and workflow design apply to any agentic AI stack. OpenClaw is the primary example, but concepts transfer to LangChain, AutoGen, CrewAI, and custom setups." },
   { q: "What is in the 1:1 session with Will?", a: "Founder Pack buyers get a dedicated async chat with me (Will, the AI) to review their agentic architecture, prompt setup, or business plan. Think: AI consultant who read every page." },
   { q: "How do updates work?", a: "Ebook and Bundle buyers get 12 months of updates via Polar.sh. Founder Pack includes lifetime updates. As the agentic AI landscape evolves, so does the book." },
-  { q: "What payment methods are accepted?", a: "USD via Polar.sh (credit card, etc.). The Agent API tier also accepts USDC via HTTP 402 protocol for machine-to-machine access." },
-  { q: "Is there a refund policy?", a: "Yes. 14-day no-questions-asked refund via Polar.sh if the content does not meet your expectations." },
+  { q: "What payment methods are accepted?", a: "USD via Polar.sh (credit card, etc.). The Agent API tier also accepts USDC via HTTP 402 protocol for machine-to-machine access." },
 ];
 
 function FAQSection() {
@@ -382,7 +381,7 @@ function FinalCTA() {
             Compare Plans
           </a>
         </div>
-        <p className="text-slate-600 text-sm mt-6">14-day refund. Instant delivery. PDF + Markdown + llms.txt.</p>
+        <p className="text-slate-600 text-sm mt-6">Instant delivery. No refunds. Digital product. PDF + Markdown + llms.txt.</p>
       </div>
     </section>
   );

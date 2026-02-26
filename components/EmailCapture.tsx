@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -59,7 +59,7 @@ export default function EmailCapture() {
           Get <span className="gradient-text">Chapter 1</span> Free
         </h2>
         <p className="text-slate-400 text-xl mb-3 max-w-2xl mx-auto leading-relaxed">
-          See the depth before you buy. Chapter 1 covers the full OpenClaw architecture -- agents, skills, memory, and orchestration.
+          See the depth before you buy. Chapter 1: The Gap in the Market -- why specification is now the bottleneck in AI development, what the Domain Translator role looks like, and how the Specification Stack unlocks 300% faster dev cycles.
         </p>
         <p className="text-slate-500 text-sm mb-10">
           No spam. Just the chapter, plus occasional updates as the book evolves.

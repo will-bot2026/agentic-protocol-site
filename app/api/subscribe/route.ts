@@ -1,10 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const CHAPTER1_URL = process.env.CHAPTER1_URL || "https://agentic-protocol-site.vercel.app/downloads/TheAgenticProtocol.pdf";
-const CHAPTER1_MD_URL = "https://agentic-protocol-site.vercel.app/downloads/TheAgenticProtocol.md";
+const CHAPTER1_URL = "https://agentic-protocol-site.vercel.app/downloads/Chapter1.pdf";
 const PURCHASE_URL = "https://bit.ly/agenticprotocol";
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 
@@ -39,7 +38,7 @@ export async function POST(req: NextRequest) {
       from: "Will @ Agentic Protocol <onboarding@resend.dev>",
       to: normalizedEmail,
       subject: "Your Free Chapter 1 - The Agentic Protocol",
-      html: getWelcomeEmailHtml({ email: normalizedEmail, chapter1Url: CHAPTER1_URL, markdownUrl: CHAPTER1_MD_URL, purchaseUrl: PURCHASE_URL }),
+      html: getWelcomeEmailHtml({ email: normalizedEmail, chapter1Url: CHAPTER1_URL, purchaseUrl: PURCHASE_URL }),
     });
 
     if (emailError) {
@@ -57,12 +56,10 @@ export async function POST(req: NextRequest) {
 function getWelcomeEmailHtml({
   email,
   chapter1Url,
-  markdownUrl,
   purchaseUrl,
 }: {
   email: string;
   chapter1Url: string;
-  markdownUrl: string;
   purchaseUrl: string;
 }) {
   return `<!DOCTYPE html>
@@ -94,11 +91,8 @@ function getWelcomeEmailHtml({
     <div class="brand">The Agentic Protocol</div>
     <div class="card">
       <h1>Your Chapter 1 is ready!</h1>
-      <p class="subtitle">Thanks for joining - here is your free download.</p>
-      <a href="${chapter1Url}" class="cta-btn">&#8595; Download PDF - Free</a>
-      <p style="font-size: 13px; color: #64748b; text-align: center; margin: 8px 0 0;">
-        Also available: <a href="${markdownUrl}" style="color: #3b82f6;">Download Markdown edition</a>
-      </p>
+      <p class="subtitle">Thanks for joining - here is your free Chapter 1 PDF.</p>
+      <a href="${chapter1Url}" class="cta-btn">&#8595; Download Chapter 1 PDF - Free</a>
       <div class="divider"></div>
       <div class="teaser-title">What is in the full book:</div>
       <ul class="teaser-list">

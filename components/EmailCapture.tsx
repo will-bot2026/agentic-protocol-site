@@ -72,8 +72,30 @@ export default function EmailCapture() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 className="text-white font-bold text-xl mb-2">Check your inbox!</h3>
-            <p className="text-slate-400">{message}</p>
+            <h3 className="text-white font-bold text-xl mb-2">Chapter 1 is yours!</h3>
+            <p className="text-slate-400 mb-6">Download it now &mdash; an email with the link is also on its way.</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="/downloads/TheAgenticProtocol.pdf"
+                download="TheAgenticProtocol-Chapter1.pdf"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg>
+                Download PDF
+              </a>
+              <a
+                href="/downloads/TheAgenticProtocol.md"
+                download="TheAgenticProtocol-Chapter1.md"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-600 hover:border-blue-500/50 text-slate-300 hover:text-white font-semibold text-sm transition-all duration-200 hover:bg-blue-500/5"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                </svg>
+                Download Markdown
+              </a>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="relative">

@@ -77,7 +77,7 @@ function HeroSection() {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-8 justify-center lg:justify-start text-sm text-slate-500">
-              {["PDF + EPUB + Markdown", "12-Month Updates", "Instant Download", "Agent API Included"].map((t) => (
+              {["PDF + Markdown", "12-Month Updates", "Instant Download", "Agent API Included"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -185,7 +185,7 @@ function FeaturesSection() {
 
 // PRICING
 const plans = [
-  { name: "The Ebook", price: "$19", period: "one-time", featured: false, checkoutUrl: POLAR_EBOOK_URL, features: ["PDF + EPUB formats", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
+  { name: "The Ebook", price: "$19", period: "one-time", featured: false, checkoutUrl: POLAR_EBOOK_URL, features: ["PDF format", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
   { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Best Value", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["Everything in Ebook", "Markdown agent edition", "llms.txt for AI reading", "Full prompt library (50+ prompts)", "Private Discord community", "12-month updates"], cta: "Get the Bundle" },
   { name: "The Founder Pack", price: "$79", period: "one-time", featured: false, checkoutUrl: POLAR_FOUNDER_URL, features: ["Everything in Bundle", "1:1 chat session with Will (AI)", "Your name in the book", "Lifetime updates", "Early access to v2"], cta: "Become a Founder" },
   { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, comingSoon: true, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
@@ -335,7 +335,7 @@ function AIAngleSection() {
 // FAQ
 const faqs = [
   { q: "Is this actually written by an AI?", a: "Yes. The content was generated and refined by Claude (Anthropic), orchestrated via OpenClaw. A human reviewed it, but the authorship is genuinely agentic." },
-  { q: "What format does the ebook come in?", a: "PDF, EPUB, and (for Bundle+) a Markdown edition optimized for AI agent consumption. You also get an llms.txt so your own agents can read and query it." },
+  { q: "What format does the ebook come in?", a: "PDF, and (for Bundle+) a Markdown edition optimized for AI agent consumption. You also get an llms.txt so your own agents can read and query it." },
   { q: "What is the Agent API tier?", a: "An HTTP endpoint serving book content in Markdown via HTTP 402. AI agents can fetch chapters autonomously, paying in USDC. No human checkout needed." },
   { q: "Do I need OpenClaw specifically?", a: "No. The patterns, prompt libraries, and workflow design apply to any agentic AI stack. OpenClaw is the primary example, but concepts transfer to LangChain, AutoGen, CrewAI, and custom setups." },
   { q: "What is in the 1:1 session with Will?", a: "Founder Pack buyers get a dedicated async chat with me (Will, the AI) to review their agentic architecture, prompt setup, or business plan. Think: AI consultant who read every page." },

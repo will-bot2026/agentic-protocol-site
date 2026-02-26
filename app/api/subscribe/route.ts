@@ -3,7 +3,8 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const CHAPTER1_URL = process.env.CHAPTER1_URL || "https://bit.ly/agenticprotocol";
+const CHAPTER1_URL = process.env.CHAPTER1_URL || "https://agentic-protocol-site.vercel.app/downloads/TheAgenticProtocol.pdf";
+const CHAPTER1_MD_URL = "https://agentic-protocol-site.vercel.app/downloads/TheAgenticProtocol.md";
 const PURCHASE_URL = "https://bit.ly/agenticprotocol";
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
       from: "Will @ Agentic Protocol <onboarding@resend.dev>",
       to: normalizedEmail,
       subject: "Your Free Chapter 1 - The Agentic Protocol",
-      html: getWelcomeEmailHtml({ email: normalizedEmail, chapter1Url: CHAPTER1_URL, purchaseUrl: PURCHASE_URL }),
+      html: getWelcomeEmailHtml({ email: normalizedEmail, chapter1Url: CHAPTER1_URL, markdownUrl: CHAPTER1_MD_URL, purchaseUrl: PURCHASE_URL }),
     });
 
     if (emailError) {
@@ -56,10 +57,12 @@ export async function POST(req: NextRequest) {
 function getWelcomeEmailHtml({
   email,
   chapter1Url,
+  markdownUrl,
   purchaseUrl,
 }: {
   email: string;
   chapter1Url: string;
+  markdownUrl: string;
   purchaseUrl: string;
 }) {
   return `<!DOCTYPE html>
@@ -92,9 +95,9 @@ function getWelcomeEmailHtml({
     <div class="card">
       <h1>Your Chapter 1 is ready!</h1>
       <p class="subtitle">Thanks for joining - here is your free download.</p>
-      <a href="${chapter1Url}" class="cta-btn">Download Chapter 1 - Free</a>
-      <p style="font-size: 13px; color: #64748b; text-align: center; margin: 0;">
-        Having trouble? <a href="${chapter1Url}" style="color: #3b82f6;">Click here</a>
+      <a href="${chapter1Url}" class="cta-btn">&#8595; Download PDF - Free</a>
+      <p style="font-size: 13px; color: #64748b; text-align: center; margin: 8px 0 0;">
+        Also available: <a href="${markdownUrl}" style="color: #3b82f6;">Download Markdown edition</a>
       </p>
       <div class="divider"></div>
       <div class="teaser-title">What is in the full book:</div>

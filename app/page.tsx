@@ -91,9 +91,7 @@ function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden border border-blue-500/25 shadow-[0_0_60px_rgba(59,130,246,0.2)]" style={{ width: "280px" }}>
                 <Image src="/cover.jpg" alt="The Agentic Protocol Book Cover" width={280} height={400} className="w-full h-auto block" priority />
               </div>
-              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>

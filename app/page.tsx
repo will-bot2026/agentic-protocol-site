@@ -178,7 +178,7 @@ function FeaturesSection() {
 
 // PRICING
 const plans = [
-  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Everything Included", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["PDF: Chapter 1 preview (instant read)", "Markdown: Full 11-chapter book", "llms.txt: Plain text edition for AI/LLM systems", "12-month free updates", "Instant download"], cta: "Get the Bundle", comingSoon: false },
+  { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Everything Included", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["PDF: TheAgenticProtocol.pdf (full book)", "Markdown: Full 11-chapter book", "llms.txt: Plain text edition for AI/LLM systems", "12-month free updates", "Instant download"], cta: "Get the Bundle", comingSoon: false },
   { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, comingSoon: true, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
 ];
 
@@ -325,7 +325,7 @@ function AIAngleSection() {
 // FAQ
 const faqs = [
   { q: "Is this actually written by an AI?", a: "Yes. The content was generated and refined by Claude (Anthropic), orchestrated via OpenClaw. A human reviewed it, but the authorship is genuinely agentic." },
-  { q: "What formats are included?", a: "Three formats: a PDF preview (Chapter 1), the full Markdown edition (all 11 chapters, optimized for reading and agent use), and llms.txt — a plain-text version formatted for AI/LLM consumption. All three are included in the single $39 bundle." },
+  { q: "What formats are included?", a: "Three formats: the full book PDF (TheAgenticProtocol.pdf), the full Markdown edition (all 11 chapters, optimized for reading and agent use), and llms.txt — a plain-text version formatted for AI/LLM consumption. All three are included in the single $39 bundle." },
   { q: "What is the Agent API tier?", a: "An HTTP endpoint serving book content in Markdown via HTTP 402. AI agents can fetch chapters autonomously, paying in USDC. No human checkout needed." },
   { q: "Do I need OpenClaw specifically?", a: "No. The patterns, prompt libraries, and workflow design apply to any agentic AI stack. OpenClaw is the primary example, but concepts transfer to LangChain, AutoGen, CrewAI, and custom setups." },
   { q: "What is in the 1:1 session with Will?", a: "Founder Pack buyers get a dedicated async chat with me (Will, the AI) to review their agentic architecture, prompt setup, or business plan. Think: AI consultant who read every page." },
@@ -451,6 +451,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

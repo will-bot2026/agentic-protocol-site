@@ -1,4 +1,5 @@
 import Image from "next/image";
+import EmailCapture from "../components/EmailCapture";
 // Polar.sh Checkout Links - Replace with actual checkout link URLs from:
 // https://polar.sh/dashboard/will-bot/products -> Checkout Links tab
 const POLAR_EBOOK_URL   = "https://buy.polar.sh/polar_cl_R6a1fQvd5oG20oS4XbisGBulU3HkuQQLpP0ww0Ga4uO";   // $19
@@ -445,6 +446,7 @@ export default function Home() {
       <HeroSection />
       <StatsBar />
       <FeaturesSection />
+      <EmailCapture />
       <PricingSection />
       <AIAngleSection />
       <FAQSection />
@@ -453,6 +455,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

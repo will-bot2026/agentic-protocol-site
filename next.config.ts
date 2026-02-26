@@ -1,8 +1,7 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Removed output: 'export' to enable API routes (serverless functions on Vercel)
   images: {
     unoptimized: true,
   },

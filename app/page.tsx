@@ -188,7 +188,7 @@ const plans = [
   { name: "The Ebook", price: "$19", period: "one-time", featured: false, checkoutUrl: POLAR_EBOOK_URL, features: ["PDF + EPUB formats", "12-month free updates", "All 11 chapters", "Diagrams & reference sheets"], cta: "Buy the Ebook" },
   { name: "The Agentic Bundle", price: "$39", period: "one-time", badge: "Best Value", featured: true, checkoutUrl: POLAR_BUNDLE_URL, features: ["Everything in Ebook", "Markdown agent edition", "llms.txt for AI reading", "Full prompt library (50+ prompts)", "Private Discord community", "12-month updates"], cta: "Get the Bundle" },
   { name: "The Founder Pack", price: "$79", period: "one-time", featured: false, checkoutUrl: POLAR_FOUNDER_URL, features: ["Everything in Bundle", "1:1 chat session with Will (AI)", "Your name in the book", "Lifetime updates", "Early access to v2"], cta: "Become a Founder" },
-  { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
+  { name: "Agent API", price: "$9", period: "USDC / mo", tag: "For Agents", featured: false, comingSoon: true, checkoutUrl: POLAR_API_URL, features: ["Markdown content via HTTP 402", "No human checkout needed", "Machine-readable format", "Auto-billing with USDC", "Ideal for AI agent consumption"], cta: "Connect via API" },
 ];
 
 function PricingSection() {
@@ -209,7 +209,7 @@ function PricingSection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {plans.map((plan) => (
-            <div key={plan.name} className={`relative rounded-2xl p-6 flex flex-col transition-all duration-200 ${plan.featured ? "bg-gradient-to-b from-blue-900/40 to-purple-900/20 border-2 border-blue-500/50 scale-[1.02] shadow-[0_0_60px_rgba(59,130,246,0.2)]" : "bg-[#0D1526] border border-[#1E2D4A] hover:border-blue-500/30"}`}>
+            <div key={plan.name} className={`relative rounded-2xl p-6 flex flex-col transition-all duration-200 ${plan.featured ? "bg-gradient-to-b from-blue-900/40 to-purple-900/20 border-2 border-blue-500/50 scale-[1.02] shadow-[0_0_60px_rgba(59,130,246,0.2)]" : "bg-[#0D1526] border border-[#1E2D4A] hover:border-blue-500/30"} ${plan.comingSoon ? "opacity-50" : ""}`}>
               {plan.badge && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold shadow-lg">
                   {plan.badge}
@@ -237,10 +237,16 @@ function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
-                className={`w-full text-center py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${plan.featured ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white hover:scale-[1.02]" : "border border-slate-600 hover:border-blue-500/50 text-slate-300 hover:text-white hover:bg-blue-500/5"}`}>
-                {plan.cta}
-              </a>
+              {plan.comingSoon ? (
+                <span className="w-full text-center py-3 px-6 rounded-xl font-semibold text-sm border border-slate-700 text-slate-500 cursor-not-allowed select-none block">
+                  Coming Soon
+                </span>
+              ) : (
+                <a href={plan.checkoutUrl} target="_blank" rel="noopener noreferrer" data-polar-checkout data-polar-checkout-theme="dark"
+                  className={`w-full text-center py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-200 ${plan.featured ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white hover:scale-[1.02]" : "border border-slate-600 hover:border-blue-500/50 text-slate-300 hover:text-white hover:bg-blue-500/5"}`}>
+                  {plan.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -446,6 +452,7 @@ export default function Home() {
       <HeroSection />
       <StatsBar />
       <FeaturesSection />
+      <DownloadsSection />
       <EmailCapture />
       <PricingSection />
       <AIAngleSection />

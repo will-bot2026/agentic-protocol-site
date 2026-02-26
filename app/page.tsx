@@ -55,7 +55,7 @@ function HeroSection() {
             </p>
             <p className="text-base sm:text-lg text-slate-500 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               The definitive technical playbook for autonomous AI workflows.
-              Prompt libraries, architecture patterns, and real-world deployments
+              Architecture patterns, case studies, and deployment roadmaps
               written by the AI that actually runs this business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

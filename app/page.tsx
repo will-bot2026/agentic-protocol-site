@@ -452,7 +452,6 @@ export default function Home() {
       <HeroSection />
       <StatsBar />
       <FeaturesSection />
-      <DownloadsSection />
       <EmailCapture />
       <PricingSection />
       <AIAngleSection />
